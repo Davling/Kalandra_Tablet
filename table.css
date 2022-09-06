@@ -2,10 +2,12 @@ body{
     background-color: hsl(255,60%,5%);
     font-family: sans-serif;
     color: white;
+    margin: 0;
 }
 
 #page{
     margin: 0 auto;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,11 +71,19 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 50px;
 }
 
 .result{
-    margin: 5px;
+    padding: 3px;
+    margin: 3px;
     font-size: 14px;
+}
+
+.result:hover{
+    background-color: rgb(51, 51, 51);
 }
 
 .result_table{
@@ -111,19 +121,22 @@ body{
     font-size: 20px;
 }
 
-.result .green{
+.result:not(:hover) .green{
     background-color: green;
     color: green;
+    filter: none;
 }
 
-.result .yellow{
+.result:not(:hover) .yellow{
     background-color: yellow;
     color: yellow;
+    filter: none;
 }
 
-.result .red{
+.result:not(:hover) .red{
     background-color: red;
     color: red;
+    filter: none;
 }
 
 .result span.green,
@@ -131,4 +144,18 @@ body{
 .result span.red{
     background-color: unset !important;
     font-weight: bold;
+}
+
+#footer{
+    color: grey;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    padding: 5px;
+    width: 100%;
+}
+
+#description{
+    margin: 10px;
+    font-size: 25px;
 }

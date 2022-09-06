@@ -81,6 +81,9 @@ function constructResult(configuration, input_tablet){
         html += '<div class="row">';
         for(let j = 0; j < 5; j++){
             html += '<div class="cell';
+            if(configuration[0] & 1){
+                html += ' active';
+            }
             if(configuration[0] & input_tablet & 1){
                 html += ' green';
             }
@@ -140,6 +143,9 @@ $(document).ready(function () {
             $("#output_container").append($(html));
         }
         else{
+            //add description
+            //let html = '<div class="result_description"><span class="green">Green</span> tiles are in the right place.<br><span class="yellow">Yellow</span> tiles are missing and need to be filled by changing water tile to empty tile or by moving <span class="red">red</span> tile to it\'s place.<br><span class="red">Red</span> tiles are in wrong place and need to be moved to a <span class="yellow">yellow</span> tile</div>';
+            //$("#output_container").append($(html));
             //calculate, sort and print results
             top_configurations.forEach(function myFunction(configuration) {
                 let differences = tabletDifference(table_configuration, configuration);
