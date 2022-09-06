@@ -1,0 +1,134 @@
+body{
+    background-color: hsl(255,60%,5%);
+    font-family: sans-serif;
+    color: white;
+}
+
+#page{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#input_container{
+    padding: 2px;
+    background-color: rgb(85, 85, 85);
+    display: inline-block;
+    border: 3px solid rgb(39, 52, 61);
+    border-radius: 5px;
+}
+
+.row{
+    display: flex;
+}
+
+.cell{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    background-color: rgb(39, 52, 61);
+    box-sizing: border-box;
+    border: 3px solid rgb(20, 20, 20);
+    border-radius: 5px;
+    border-top-color: rgb(170, 170, 170);
+    border-right-color: #747474;
+}
+
+.cell:not(.active):hover{
+    filter: grayscale(80%) brightness(125%);
+}
+
+
+.cell.active{
+    background-color: rgb(82, 89, 139);
+    filter: grayscale(80%) brightness(150%);
+
+}
+
+#button{
+    cursor: pointer;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(33, 53, 75);
+    margin: 20px;
+    border-bottom-color: rgb(21, 29, 39);
+    border-top-color: rgb(68, 97, 134);
+    border-left-color: rgb(20, 27, 37);
+    border-right-color: rgb(45, 81, 114);
+}
+
+#button:hover{
+    filter: grayscale(25%) brightness(150%);
+}
+
+#output_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.result{
+    margin: 5px;
+    font-size: 14px;
+}
+
+.result_table{
+    padding: 1px;
+    background-color: rgb(85, 85, 85);
+    border: 2px solid rgb(39, 52, 61);
+    border-radius: 3px;
+}
+
+.result_text{
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.result_text div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.result .cell{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    margin: 1px;
+    border-width: 2px;
+    border-radius: 3px;
+    cursor: auto;
+}
+
+.result .cell:not(.active):hover{
+    filter: none;
+}
+
+.result_error{
+    font-size: 20px;
+}
+
+.result .green{
+    background-color: green;
+    color: green;
+}
+
+.result .yellow{
+    background-color: yellow;
+    color: yellow;
+}
+
+.result .red{
+    background-color: red;
+    color: red;
+}
+
+.result span.green,
+.result span.yellow,
+.result span.red{
+    background-color: unset !important;
+    font-weight: bold;
+}
